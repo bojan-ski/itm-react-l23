@@ -35,7 +35,7 @@ const Login = () => {
 
             refresh()
         }else{
-            throw new Error('some thing went wrong')
+            throw new Error('You were not able to login to the application, some thing went wrong')
         }        
     }
 

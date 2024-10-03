@@ -25,9 +25,17 @@ const Navbar = () => {
                     Log Out
                 </button>
             ) : (
-                <Link href='/login' className="nav-link">
-                    Login
-                </Link>
+                <>
+                    <Link href='/google_registration' className="nav-link">
+                        Google Create Account
+                    </Link>
+                    <Link href='/google_login' className="nav-link">
+                        Google Login
+                    </Link>
+                    <Link href='/login' className="nav-link">
+                        Custom Login
+                    </Link>
+                </>
             )}
         </nav>
     )

@@ -1,7 +1,7 @@
 // firebase/firestore funcs
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { doc, setDoc, serverTimestamp } from "firebase/firestore"
-import { db } from "../../app/firebase.config"
+import { db } from "../../app/firebase"
 // toastify
 import { toast } from "react-toastify"
 

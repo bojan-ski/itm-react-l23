@@ -1,6 +1,6 @@
 // firebase/firestore funcs
 import { addDoc, doc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../../app/firebase.config";
+import { db } from "../../app/firebase";
 // toastify
 import { toast } from "react-toastify";
 

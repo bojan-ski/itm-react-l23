@@ -1,7 +1,7 @@
 // firebase/firestore funcs
 import { getAuth } from "firebase/auth";
 import { collection, doc, getDocs } from "firebase/firestore"
-import { db } from "../../app/firebase.config";
+import { db } from "../../app/firebase";
 
 
 const fetchUserBookmarkedPetListingsFromFirebase = async () => {

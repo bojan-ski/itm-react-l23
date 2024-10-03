@@ -1,6 +1,6 @@
 // firebase/firestore funcs
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../../app/firebase.config.js/index.js";
+import { db } from "../../app/firebase.js/index.js";
 // utils funcs
 import getCurrentTimeAndDate from "../utils/getCurrentTimeAndDate.js";
 // toastify

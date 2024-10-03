@@ -39,7 +39,7 @@ const SearchBar = () => {
 
     }, [searchTerm]);
 
-    if(pathname == '/login') return  
+    if(pathname == '/login' || pathname == '/google_registration' || pathname == '/google_login') return  
 
     return (
         <>

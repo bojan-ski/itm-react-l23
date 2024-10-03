@@ -1,6 +1,6 @@
 // firebase/firestore funcs
 import { doc, deleteDoc } from "firebase/firestore"
-import { db } from "../../app/firebase.config";
+import { db } from "../../app/firebase";
 import { toast } from "react-toastify";
 
 
