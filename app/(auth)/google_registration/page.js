@@ -27,7 +27,7 @@ const GoogleRegistration = () => {
             e.target.elements[1].value = ''
             e.target.elements[2].value = ''
 
-            // refresh()
+            refresh()
         }else{
             throw new Error('You were not able to create an account, some thing went wrong')
         }

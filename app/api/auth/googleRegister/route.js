@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 // firebase funcs
-import { auth } from "@/app/firebase";
+import { auth } from "@/app/firebase.config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 export const POST = async (request) => {
@@ -12,6 +12,9 @@ export const POST = async (request) => {
         updateProfile(auth.currentUser, {
             displayName: username
         })
+
+        //success message
+        console.log('your account has been created');
 
         return NextResponse.json({ "message": "all good" });
     } catch (error) {

@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
 export const POST = async (request) => {   
-    const {username, password} = await request.json()
+    const {username, password} = await request.json()    
 
     try {
-        const apiCall = await fetch(`${process.env.LOGIN_URL}`, {
+        const apiCall = await fetch(`${process.env.NEXT_PUBLIC_LOGIN_URL}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

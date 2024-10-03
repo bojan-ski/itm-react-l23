@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const GET = async () => {    
     try {
-        const apiCall = await fetch(`${process.env.API_URL}?limit=9`)        
+        const apiCall = await fetch(`${process.env.NEXT_PUBLIC_API_URL}?limit=9`)        
         const productsListData = await apiCall.json() 
 
         return NextResponse.json(productsListData)      

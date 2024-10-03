@@ -3,10 +3,14 @@ import Link from "next/link"
 // utils
 import getUserCredentials from "@/utils/getUserCredentials"
 import refresh from "@/utils/refresh"
+// context
+import { useGoogleAuthContext } from "@/app/context"
 
 const Navbar = () => {
     const checkIfUserIsLoggedIn = getUserCredentials()
-
+    const {userProfileDetails} = useGoogleAuthContext()
+    console.log(userProfileDetails);
+    
     return (
         <nav className="navbar">
             <Link href='/' className="nav-link">

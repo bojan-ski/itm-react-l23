@@ -160,7 +160,8 @@ main {
   margin-top: 10px;
 }
 
-/* register product page & login page & google registration page */
+/* register product page & login page & google registration page & google login page  */
+.google-login-page .google-login-feature,
 .google-registration-page .google-registration-feature,
 .login-page .login-feature,
 .register-product-page .register-product-feature {
@@ -171,6 +172,7 @@ main {
   padding: 20px 25px;
 }
 
+.google-login-form input,
 .google-registration-form input,
 .add-product-form input,
 .login-form input {
@@ -183,6 +185,7 @@ main {
   border: 1px solid #000;
 }
 
+.google-login-form .btn-container,
 .google-registration-form .btn-container,
 .login-form .btn-container,
 .add-product-form .btn-container {
@@ -191,6 +194,7 @@ main {
   justify-content: space-between;
 }
 
+.google-login-form .btn-container button,
 .google-registration-form .btn-container button,
 .login-form .btn-container button, 
 .add-product-form .btn-container button {
@@ -203,18 +207,21 @@ main {
   cursor: pointer;
 }
 
+.google-login-form .btn-container button:active,
 .google-registration-form .btn-container button:active,
 .login-form .btn-container button:active,
 .add-product-form .btn-container button:active {
   transform: scale(0.9);
 }
 
+.google-login-form .btn-container .submit-btn,
 .google-registration-form .btn-container .submit-btn,
 .login-form .btn-container .submit-btn,
 .add-product-form .btn-container .submit-btn {
   background-color: green;
 }
 
+.google-login-form .btn-container .cancel-btn,
 .google-registration-form .btn-container .cancel-btn,
 .login-form .btn-container .cancel-btn,
 .add-product-form .btn-container .cancel-btn {
