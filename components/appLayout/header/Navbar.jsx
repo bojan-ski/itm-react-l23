@@ -2,32 +2,35 @@
 import Link from "next/link"
 // utils
 import getUserCredentials from "@/utils/getUserCredentials"
-import refresh from "@/utils/refresh"
 // context
 import { useGoogleAuthContext } from "@/app/context"
+// components
+import LogOutBtnCustom from "./LogOutBtnCustom"
+import LogOutBtnGoogle from "./LogOutBtnGoogle"
+
 
 const Navbar = () => {
     const checkIfUserIsLoggedIn = getUserCredentials()
-    const {userProfileDetails} = useGoogleAuthContext()
-    console.log(userProfileDetails);
-    
+    const { userProfileDetails } = useGoogleAuthContext()
+
     return (
         <nav className="navbar">
             <Link href='/' className="nav-link">
                 Home
             </Link>
 
-            <Link href='/products/register' className="nav-link">
-                Register Product
-            </Link>
+            {checkIfUserIsLoggedIn || (userProfileDetails && userProfileDetails.userLoggedIn) ? (
+                <>
+                    <Link href='/products/register' className="nav-link">
+                        Register Product
+                    </Link>
 
-            {checkIfUserIsLoggedIn ? (
-                <button className="log-out-btn" onClick={() => {
-                    localStorage.clear()
-                    refresh()
-                }}>
-                    Log Out
-                </button>
+                    {checkIfUserIsLoggedIn ? (
+                        <LogOutBtnCustom />
+                    ) : (
+                        <LogOutBtnGoogle />
+                    )}
+                </>
             ) : (
                 <>
                     <Link href='/google_registration' className="nav-link">
